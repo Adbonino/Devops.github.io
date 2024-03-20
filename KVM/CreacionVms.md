@@ -16,14 +16,20 @@ virt-install
     --check all=off
 ```
 
-## Servicio para poder ingresar por consola desde el HOST.
+## Servicio para poder ingresar por consola desde el HOST. - consola serie virtual
 
 ```
 # systemctl enable serial-getty@ttyS0.service 
 # systemctl start serial-getty@ttyS0.service 
 ```
-
-
+Luego desde el Host puedo ingresar a la console del invitado con el siguiente comnado:
 ```
-# virsh destroy VM_NAME
+# virsh console VM_NAME
+```
+
+
+
+Detener una máquina virtual
+```
+# virsh shutdown VM_NAME
 ```
