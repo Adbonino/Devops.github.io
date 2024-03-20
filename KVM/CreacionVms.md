@@ -1,4 +1,5 @@
-Creación de una máquina virtual
+# Creación de una máquina virtual
+
 
 virt-install 
     --connect 
@@ -14,7 +15,8 @@ virt-install
     --check all=off
 
 
-Servicio para poder ingresar por consola desde el HOST.
+## Servicio para poder ingresar por consola desde el HOST.
 
 systemctl enable serial-getty@ttyS0.service 
+
 systemctl start serial-getty@ttyS0.service 
