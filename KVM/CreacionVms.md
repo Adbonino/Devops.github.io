@@ -25,7 +25,11 @@ virt-install
 Luego desde el Host puedo ingresar a la console del invitado con el siguiente comnado:
 ```
 # virsh console VM_NAME
+Connected to domain VM_NAME 
+Escape character is ^] 
 ```
+Presione ENTER para acceder al login.
+Para salir de la consola virtual presionar CTRL +]
 
 
 
