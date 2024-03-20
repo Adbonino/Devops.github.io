@@ -1,6 +1,7 @@
 # Creación de una máquina virtual
 
 
+```
 virt-install 
     --connect 
     qemu:///system 
@@ -13,7 +14,7 @@ virt-install
     --extra-args="console=tty0 console=ttyS0,115200" 
     --graphics none 
     --check all=off
-
+```
 
 ## Servicio para poder ingresar por consola desde el HOST.
 
