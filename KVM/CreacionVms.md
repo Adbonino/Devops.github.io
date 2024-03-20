@@ -18,6 +18,12 @@ virt-install
 
 ## Servicio para poder ingresar por consola desde el HOST.
 
-systemctl enable serial-getty@ttyS0.service 
+```
+# systemctl enable serial-getty@ttyS0.service 
+# systemctl start serial-getty@ttyS0.service 
+```
 
-systemctl start serial-getty@ttyS0.service 
+
+```
+# virsh destroy VM_NAME
+```
