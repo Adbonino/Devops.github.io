@@ -1,40 +1,40 @@
 <html>
     <h1>Creación de una máquina virtual</h1>
 
-```
-virt-install 
-    --connect 
-    qemu:///system 
-    --network bridge:virbr0 
-    --name EMS02 
-    --ram 16384 
-    --vcpu 8 
-    --disk path=/var/opt/opwv/logs/media/work/kvm/EMS02-os.qcow2,format=qcow2,bus=virtio,size=50 
-    --location=/var/lib/libvirt/images/rhel-8.6-x86_64-dvd.iso 
-    --extra-args="console=tty0 console=ttyS0,115200" 
-    --graphics none 
-    --check all=off
-```
+
+virt-install </br>
+    --connect </br>
+    qemu:///system </br>
+    --network bridge:virbr0 </br>
+    --name EMS02 </br>
+    --ram 16384 </br>
+    --vcpu 8 </br>
+    --disk path=/var/opt/opwv/logs/media/work/kvm/EMS02-os.qcow2,format=qcow2,bus=virtio,size=50 </br>
+    --location=/var/lib/libvirt/images/rhel-8.6-x86_64-dvd.iso </br>
+    --extra-args="console=tty0 console=ttyS0,115200" </br>
+    --graphics none </br>
+    --check all=off</br>
+
 
 <h3>Servicio para poder ingresar por consola desde el HOST. - consola serie virtual</h3>
 
-```
-# systemctl enable serial-getty@ttyS0.service 
-# systemctl start serial-getty@ttyS0.service 
-```
+
+# systemctl enable serial-getty@ttyS0.service </br>
+# systemctl start serial-getty@ttyS0.service </br>
+
 Luego desde el Host puedo ingresar a la console del invitado con el siguiente comnado:
-```
-# virsh console VM_NAME
-Connected to domain VM_NAME 
-Escape character is ^] 
-```
-Presione ENTER para acceder al login.
-Para salir de la consola virtual presionar CTRL +]
+
+# virsh console VM_NAME </br>
+Connected to domain VM_NAME </br>
+Escape character is ^] </br>
+</br>
+Presione ENTER para acceder al login.</br>
+Para salir de la consola virtual presionar CTRL +]</br>
 
 
 
 <h3>Detener una máquina virtual</h3>
-```
+
 # virsh shutdown VM_NAME
-```
+
 <html>
