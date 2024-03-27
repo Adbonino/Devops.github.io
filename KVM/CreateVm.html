@@ -2,19 +2,20 @@
     <h1>Creación de una máquina virtual</h1>
 
 
-virt-install </br>
-    --connect </br>
-    qemu:///system </br>
-    --network bridge:virbr0 </br>
-    --name EMS02 </br>
-    --ram 16384 </br>
-    --vcpu 8 </br>
-    --disk path=/var/opt/opwv/logs/media/work/kvm/EMS02-os.qcow2,format=qcow2,bus=virtio,size=50 </br>
-    --location=/var/lib/libvirt/images/rhel-8.6-x86_64-dvd.iso </br>
-    --extra-args="console=tty0 console=ttyS0,115200" </br>
-    --graphics none </br>
-    --check all=off</br>
-
+<code>
+virt-install 
+    --connect 
+    qemu:///system 
+    --network bridge:virbr0 
+    --name EMS02 
+    --ram 16384
+    --vcpu 8 
+    --disk path=/var/opt/opwv/logs/media/work/kvm/EMS02-os.qcow2,format=qcow2,bus=virtio,size=50
+    --location=/var/lib/libvirt/images/rhel-8.6-x86_64-dvd.iso 
+    --extra-args="console=tty0 console=ttyS0,115200" 
+    --graphics none 
+    --check all=off
+<code>
 
 <h3>Servicio para poder ingresar por consola desde el HOST. - consola serie virtual</h3>
 
