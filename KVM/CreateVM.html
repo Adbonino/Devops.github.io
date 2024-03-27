@@ -1,5 +1,5 @@
-# Creación de una máquina virtual
-
+<html>
+    <h1>Creación de una máquina virtual</h1>
 
 ```
 virt-install 
@@ -16,7 +16,7 @@ virt-install
     --check all=off
 ```
 
-## Servicio para poder ingresar por consola desde el HOST. - consola serie virtual
+<h3>Servicio para poder ingresar por consola desde el HOST. - consola serie virtual</h3>
 
 ```
 # systemctl enable serial-getty@ttyS0.service 
@@ -33,7 +33,8 @@ Para salir de la consola virtual presionar CTRL +]
 
 
 
-Detener una máquina virtual
+<h3>Detener una máquina virtual</h3>
 ```
 # virsh shutdown VM_NAME
 ```
+<html>
