@@ -31,6 +31,16 @@ Escape character is ^]
 Presione ENTER para acceder al login.
 Para salir de la consola virtual presionar CTRL +]
 
+# Clonar un maquina
+virt-clone --original EMS01 --name ORCHvLB01 --file /var/opt/opwv/logs/media/work/kvm/ORCHvLB01-os.qcow2
+  283  virsh EMS01 stop
+  284  virsh shutdown EMS01
+  285  virsh list --all
+  286  virt-clone --original EMS01 --name ORCHvLB01 --file /var/opt/opwv/logs/media/work/kvm/ORCHvLB01-os.qcow2
+  287  virsh list --all
+  288  virt-clone --original EMS01 --name FWDvLB01 --file /var/opt/opwv/logs/media/work/kvm/FWDvLB01-os.qcow2
+
+
 
 
 Detener una máquina virtual
