@@ -47,3 +47,17 @@ Detener una máquina virtual
 ```
 # virsh shutdown VM_NAME
 ```
+# Cracion del pool
+ 261  virsh pool-destroy default
+  262  virsh pool-define-as --name default --type dir --target /var/opt/opwv/logs/media/work/kvm
+  263  virsh pool-destroy kvm
+  264  virsh pool-define-as --name default --type dir --target /var/opt/opwv/logs/media/work/kvm
+  265  virsh pool-list
+  266  virsh pool-define-as --name default --type dir --target /var/opt/opwv/logs/media/work/kvm
+  267  virsh pool-undefine kvm
+  268  virsh pool-define-as --name default --type dir --target /var/opt/opwv/logs/media/work/kvm
+  269  virsth pool-autostart default
+  270  virsh pool-autostart default
+  271  virsh pool-list
+  272  virsh pool-start default
+  273  virsh pool-list
