@@ -61,3 +61,7 @@ Detener una máquina virtual
   271  virsh pool-list
   272  virsh pool-start default
   273  virsh pool-list
+
+  ## Agregar interface de red
+
+  sudo virsh attach-interface --domain mi_vm --type bridge --source NOMBRE_DEL_BRIDGE --model virtio --config
